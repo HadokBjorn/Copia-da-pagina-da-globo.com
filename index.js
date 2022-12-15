@@ -1,7 +1,7 @@
 let noticiaNaTela = document.querySelector(".noticia-com-imagens");
 let noticiaNaTelaTexto = document.querySelector(".noticias-texto");
-let noticiaCaixaMaior = document.querySelector(".blocknews-maior");
-let noticiaCaixaLaranja = document.querySelector(".caixa-menor");
+let noticiaCaixaMaior = document.querySelector(".esporte");
+let noticiaCaixaLaranja = document.querySelector(".fofoca");
 
 
 const dadosPrincipais = [
@@ -113,7 +113,8 @@ let noticiasPrincipais = ``;
 
 for (let i = 0; i < dadosPrincipais.length; i++) {
   noticiasPrincipais += `
-        <a href="${dadosPrincipais[i].link}"><div class="news-img">
+        <a href="${dadosPrincipais[i].link}">
+          <div class="card-principal">
             <div class="noticia-e-foto">
               <div class="foto">
                 <img src="${dadosPrincipais[i].img}" />
@@ -123,12 +124,11 @@ for (let i = 0; i < dadosPrincipais.length; i++) {
                 <h3>${dadosPrincipais[i].titulo}</h3>
               </div>
             </div>
-
             <div class="texto-underphoto">
               <p>${dadosPrincipais[i].textinho}</p>
             </div>
           </div>
-          </a>
+        </a>
 `;
 }
 
@@ -138,14 +138,15 @@ let noticiaTextoNaTela = ``;
 
 for (let i = 0; i < noticiasEmTextos.length; i++) {
   noticiaTextoNaTela += `
-    <a href="${noticiasEmTextos[i].link}"><div class="bloco-texto">
-    <p class="tema">${noticiasEmTextos[i].tema}</p>
-    <h3>${noticiasEmTextos[i].titulo}</h3>
-    <div class="texto-underphoto">
-      ${noticiasEmTextos[i].textinho}
-    </div>
-  </div>
-  </a>
+    <a href="${noticiasEmTextos[i].link}">
+      <div class="bloco-texto">
+        <p class="tema">${noticiasEmTextos[i].tema}</p>
+        <h3>${noticiasEmTextos[i].titulo}</h3>
+          <div class="texto-underphoto">
+            ${noticiasEmTextos[i].textinho}
+          </div>
+      </div>
+    </a>
 `;
 }
 
@@ -155,22 +156,21 @@ let blocoMaior = ``;
 
 for (let i = 0; i < noticiasEmTextos.length; i++) {
   blocoMaior += `
-    <a href = "${noticiasVerde[i].link}"<div class="caixa-maior">
-          <div class="block-text-img">
-          
-            <div class="imgnews-maior">
-              <img src="${noticiasVerde[i].img}">
-            </div>
-
-            <div class="titulo-da-foto">
-              <p>${noticiasVerde[i].tema}</p>
-              ${noticiasVerde[i].titulo}
-            </div>
-
-          </div>
-          <div class="texto-underphoto">${noticiasVerde[i].textinho}</div>
+    <a href = "${noticiasVerde[i].link}"<div class="caixa-fofoca">
+      <div class="block-text-img">
+        <div class="imgnews-maior">
+          <img src="${noticiasVerde[i].img}">
         </div>
-        </a>
+        <div class="titulo-da-foto">
+          <p>${noticiasVerde[i].tema}</p>
+        ${noticiasVerde[i].titulo}
+        </div>
+      </div>
+      <div class="texto-underphoto">
+        ${noticiasVerde[i].textinho}
+      </div>
+      </div>
+    </a>
   `;
 }
 noticiaCaixaMaior.innerHTML += blocoMaior;
@@ -180,23 +180,22 @@ let newLaranja = ``;
 for (let i = 0; i < noticiasLaranja.length; i++) {
   newLaranja += `
   <a href="${noticiasLaranja[i].link}">
-<div class="caixa-maior">
-              <div class="block-text-img">
-                <div class="imgnews-maior">
-                  <img src="${noticiasLaranja[i].img}">
-                </div>
-                <div class="titulo-da-foto">
-                  <p>${noticiasLaranja[i].tema}</p>
-                  ${noticiasLaranja[i].titulo}
-    
-                </div>
-              </div>
-              <div class="texto-underphoto">
-                <p>${noticiasLaranja[i].textinho}</p>
-                <p>${noticiasLaranja[i].text2}</p>
-              </div>
-            </div>
-            </a>
+    <div class="caixa-fofoca">
+      <div class="block-text-img">
+        <div class="imgnews-maior">
+            <img src="${noticiasLaranja[i].img}">
+          </div>
+          <div class="titulo-da-foto">
+            <p>${noticiasLaranja[i].tema}</p>
+            ${noticiasLaranja[i].titulo}
+          </div>
+      </div>
+      <div class="texto-underphoto">
+        <p>${noticiasLaranja[i].textinho}</p>
+        <p>${noticiasLaranja[i].text2}</p>
+      </div>
+    </div>
+  </a>
 `          
 };
 noticiaCaixaLaranja.innerHTML += newLaranja;

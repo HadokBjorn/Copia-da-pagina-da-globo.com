@@ -4,13 +4,8 @@ body {
   font-family: "Encode Sans", sans-serif;
   background-size: cover;
   font-weight: 700;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .container-geral{
-  width: 100vw;
-  max-width: 576px;
   width: 100%;
   padding: 0;
   display: flex;
@@ -18,11 +13,11 @@ body {
 }
 
 .topMenu {
+  width: 100%;
   height: 139px;
   border-bottom: 1px solid #e6e6e6;
 }
 .logo {
-  
   height: 80px;
   display: flex;
   justify-content: space-evenly;
@@ -42,6 +37,7 @@ body {
   display: none;
 }
 .menu-mobile {
+  width: 100%;
   height: 58px;
   list-style: none;
   display: flex;
@@ -75,7 +71,6 @@ a {
   padding: 0 15px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 .principal-news {
   color: #cd150b;
@@ -85,8 +80,12 @@ a {
 }
 .manchete p {
   margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 25px;
+  width: 100%;
+  text-align: left;
 }
-.news-img {
+.card-principal {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #e6e6e6;
@@ -96,7 +95,7 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-.titulo {
+h1 {
   padding: 16px 0;
   font-size: 32px;
   line-height: 40px;
@@ -109,11 +108,6 @@ a {
 .titulo-da-foto p {
   font-weight: 500;
   font-size: 14px;
-}
-.subtitulo {
-  font-size: 18px;
-  margin-bottom: 5px;
-  line-height: 25px;
 }
 .foto img {
   width: 120px;
@@ -138,20 +132,19 @@ a {
   font-size: 18px;
   line-height: 25px;
 }
-.blocknews-maior{
-    color:#06AA48;
+.esporte{
+  color:#06AA48;
 }
 .block-text-img{
-    display: flex;
-    align-items: center;
-    padding-top: 20px;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
 }
 .imgnews-maior img{
-    border-radius: 4px;
-    width: 120px;
-    margin-right: 8.5px;
-    
+  border-radius: 4px;
+  width: 120px;
+  margin-right: 8.5px;
 }
-.blocknews-menor{
+.fofoca{
   color:#FF8203;
 }
