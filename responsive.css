@@ -215,45 +215,7 @@ display: none;
     justify-content: space-between;
     align-items: center;
 }
-.menu-web li {
-    font-size: 19px;
-    align-items: center;
-    line-height: 23.75px;
-}
-a {
-text-decoration: none;
-    color: unset;
-}
-.red {
-    color: #C3170C;
-}
-.blue {
-    color: #1E4B9B;
-}
-.dark-green{
-    color: #006766;
-}
-.green {
-    color: #07AA47;
-}
-.orange-dark{
-    color: #E3662B;
-}
-.pink-red{
-    color: #FB0735;
-}
-.pink{
-    color: #FF75BB;
-}
-.orange {
-    color: #EC7D00;
-}
-.gray {
-    color: #323333;
-}
-.violet{
-    color: #A81D83;
-}
+
 .body-news {
     flex-direction: row;
     padding-top: 36px;
